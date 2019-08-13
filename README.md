@@ -8,6 +8,9 @@ Users are able to:
 [] Get nutritional value of food broken 
 [] Get a comparison of the meal's nutrition to a daily average intake
 
+# Wireframes
+![Wireframe]["./wire_frame.jpg"]
+
 # Architecture and Technology
 EDAMAM is a free available API that return the nutrional breakdown values of given ingredients.
 
