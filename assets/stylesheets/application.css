@@ -3,12 +3,52 @@
     height: 30vh; */
     /* height: 500px;
     width: 500px; */
+    height: 100%;
 }
 
 .chart-container {
-    /* height: 500px;
-    width: 500px; */
+    height: 40vh;
+    width: 40vw;
+    border: 1px solid black;
+    margin: 0 20px;
+    /* background-color: #5CC8FF; */
 }
-/* .body {
-    background-color: blue;
-} */
+
+.form-wrapper {
+    /* margin-right: 20px; */
+    margin: 0 50px;
+}
+
+
+.form-chart-wrapper {
+    display: flex;
+    /* align-items: center; */
+    /* position: absolute;
+    top: 15%;
+    left: 20%; */
+    border: 1px solid black;
+    width: 90%;
+    height: 80vh;
+}
+
+.food-form {
+    /* width: 10vw; */
+    border: 1px solid green;
+    width: 100%
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+
+.food-list {
+    display: block;
+    border: 1px solid black;
+    width: 20vw;
+    height: 100%;
+    text-align: center;
+    margin-left: 50px;
+}

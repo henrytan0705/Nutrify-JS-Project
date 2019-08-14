@@ -3,6 +3,7 @@
 var chart = null;
 
 document.addEventListener("submit", (e) => {
+    chart = null;
     e.preventDefault();
     let formValue = document.getElementById("formValue").value;
 
@@ -37,7 +38,7 @@ document.addEventListener("submit", (e) => {
 
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
         .then(data => {
-            let typesOfFood = Object.values(data.foods).map(i => i.food_name);
+            var typesOfFood = Object.values(data.foods).map(i => i.food_name);
 
             let nutritionalData = {
                 // totalCalories: 0,
@@ -61,11 +62,11 @@ document.addEventListener("submit", (e) => {
                 nutritionalData.totalSugar += data.foods[i].nf_sugars;
             }
 
-            // debugger
+            debugger
 
             let ctx = document.getElementById("polarChart");
             chart = new Chart(ctx, {
-                type: 'bar',
+                type: 'doughnut',
                 data: {
                     labels: nutritionTypes,
                     datasets: [{
@@ -106,7 +107,7 @@ document.addEventListener("submit", (e) => {
             });
         })
         .catch(error => {
-            debugger
+            // debugger
            return console.log(error);
         })    
 })
