@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <Link rel="stylesheet" href="./assets//stylesheets/application.css">
     <title>Document</title>
+
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    <!-- <script src="liquidFillGauge.js" language="JavaScript"></script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="src/index.js"></script>
 </head>
 
 
@@ -33,12 +39,20 @@
 
     <div class="charts-wrapper">
         <div class="nutrition-chart-wrapper">
-            <h1 class="nutrition-chart-title">Nutritional Breakdown</h1>
+            <h1 class="nutrition-chart-title">Nutritional Breakdown in grams</h1>
             <canvas id="nutrition"></canvas>
         </div>
         
-        <div class="health-chart-wrapper">
-            <canvas id="health"></canvas>
+        <div class="percentage-chart-wrapper">
+
+            <svg id="calories" height="250px" width="20%"></svg>
+            <svg id="protein" height="200px" width="15%"></svg>
+            <!-- <svg id="carbs" height="200px" width="15%"></svg>
+            <svg id="fats" height="200px" width="15%"></svg>
+            <svg id="sodium" height="200px" width="15%"></svg>
+            <svg id="cholesterol" height="200px" width="15%"></svg>
+            <svg id="sugar" height="200px" width="15%"></svg>  -->
+
         </div>
  
     </div>
@@ -47,7 +61,6 @@
 
 </body>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-<script src="src/index.js"></script>
+
 
 </html>

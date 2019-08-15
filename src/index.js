@@ -1,9 +1,8 @@
-// import '../assets/stylesheets/css_reset.css';
-// import '../assets/stylesheets/application.css';
 var chart = null;
 
 document.addEventListener("submit", (e) => {
-    chart = null;
+    if (chart !== null) chart.destroy();
+
     e.preventDefault();
     let formValue = document.getElementById("formValue").value;
     let foodList = document.getElementById("food");
@@ -36,11 +35,6 @@ document.addEventListener("submit", (e) => {
             .then(response => response.json());
     }
 
-    // let body = {
-    //     "query": "for breakfast i ate 2 eggs, bacon, and french toast",
-    //     "timezone": "US/Eastern"
-    // };
-
     let typesOfFood;
 
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
@@ -48,7 +42,6 @@ document.addEventListener("submit", (e) => {
             typesOfFood = Object.values(data.foods).map(i => i.food_name);
             let totalCalories = 0; 
             let nutritionTypes = ["Protein", "Carbohydrates", "Fats", "Sodium", "Cholesterol", "Sugar"];
-
             let nutritionalData = {
                 totalProtein: 0,
                 totalCarbs: 0,
@@ -67,8 +60,6 @@ document.addEventListener("submit", (e) => {
                 nutritionalData.totalCarbs += data.foods[i].nf_total_carbohydrate;
                 nutritionalData.totalSugar += data.foods[i].nf_sugars;
             }
-
-            // debugger
 
             let ctx = document.getElementById("nutrition");
             chart = new Chart(ctx, {
@@ -117,13 +108,28 @@ document.addEventListener("submit", (e) => {
             for (let i = 0; i < typesOfFood.length; i++) {
                 let food = document.createElement("h1");
                 food.appendChild(document.createTextNode(`${typesOfFood[i]}`));
-                // console.log(food);
+                food.classList.add("food-item")
                 foodList.appendChild(food);
-            }
-            
+            }             
+
+            let gauge1 = loadLiquidFillGauge("calories", (totalCalories/ 2000) * 100)
+            let config1 = liquidFillGaugeDefaultSettings();
+            // debugger
+            config1.circleColor = "#FF7777";
+            config1.textColor = "#FF4444";
+            config1.waveTextColor = "#FFAAAA";
+            config1.waveColor = "#FFDDDD";
+            config1.circleThickness = 0.2;
+            config1.textVertPosition = 0.2;
+            config1.waveAnimateTime = 1000;
+            let gauge2 = loadLiquidFillGauge("protein", 28, config1);
+            // var config2 = liquidFillGaugeDefaultSettings();
         })
         .catch(error => {
-            // debugger
            return console.log(error);
-        })    
+        })
+        
+        
+
+        
 })
