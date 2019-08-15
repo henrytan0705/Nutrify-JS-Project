@@ -141,6 +141,7 @@
 .nutrition-chart-wrapper {
     border: 1px solid black;
     height: 45vh;
+    width: 100%;
     margin-bottom: 2vh;
     /* padding-bottom: 10vh; */
 }
