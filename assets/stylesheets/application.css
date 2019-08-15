@@ -1,38 +1,15 @@
-#polarChart {
-    /* width: 30vw;
-    height: 30vh; */
-    /* height: 500px;
-    width: 500px; */
-    height: 100%;
-}
-
-.chart-container {
-    height: 40vh;
-    width: 40vw;
-    border: 1px solid black;
-    margin: 0 20px;
-    /* background-color: #5CC8FF; */
-}
-
-.form-wrapper {
-    /* margin-right: 20px; */
-    margin: 0 50px;
-}
-
-
-.form-chart-wrapper {
+/* .layout-wrapper {
     display: flex;
-    /* align-items: center; */
-    /* position: absolute;
-    top: 15%;
-    left: 20%; */
     border: 1px solid black;
     width: 90%;
     height: 80vh;
 }
 
+.form-wrapper {
+    margin: 0 50px;
+}
+
 .food-form {
-    /* width: 10vw; */
     border: 1px solid green;
     width: 100%
 }
@@ -44,11 +21,133 @@
     text-align: center;
 }
 
-.food-list {
-    display: block;
+.form-title {
     border: 1px solid black;
-    width: 20vw;
-    height: 100%;
+}
+
+.form-textarea {
+    background-color: blue;
+} */
+
+/*---------------------------------------------*/
+
+/* .food-list-wrapper {
+    display: block;
+    border: 1px solid red;
     text-align: center;
-    margin-left: 50px;
+    margin: 0 30px;
+}
+
+.food-list {
+    width: 20vw;
+    height: 40vh;
+} */
+
+/*---------------------------------------------*/
+
+
+/* .nutrition-chart-wrapper {
+    height: 40vh;
+    width: 40vw;
+    border: 1px solid black;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.nutrition-chart-title {
+    border: 1px solid black;
+}
+
+#nutrition {
+    height: 100%;
+} */
+
+/*---------------------------------------------*/
+
+/* .nutrition-chart-wrapper {
+    border: 1px solid black;
+    height: 200px;
+    width: 200px;
+} */
+
+/*------------------------------------------------------------------------*/
+
+.layout-wrapper {
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    border: 1px solid black;
+    width: 90vw;
+    height: 90vh;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+}
+
+/*---------------------------------------------*/
+
+.form-wrapper {
+    border: 1px solid black;
+    text-align: center;
+    height: 80vh;
+    margin: 5vh 0;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 5vh; */
+    border: 1px solid blue;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*---------------------------------------------*/
+
+.food-list-wrapper {
+    border: 1px solid red;
+    text-align: center;
+    height: 80vh;
+    margin: 5vh 0;
+}
+
+.food-list {
+    width: 20vw;
+    height: 60vh;
+    border: 1px solid black;
+    margin: 3.5vw;
+    font-size: 10px;
+}
+
+.food-list-title {
+    font-size: 30px;
+}
+
+.list {
+    overflow: scroll;
+}
+/*---------------------------------------------*/
+
+.charts-wrapper {
+    border: 1px solid green;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    /* margin-top: 1vh; */
+}
+
+.nutrition-chart-wrapper {
+    border: 1px solid black;
+    height: 45vh;
+    margin-bottom: 2vh;
+    /* padding-bottom: 10vh; */
+}
+
+/*---------------------------------------------*/
+
+.health-chart-wrapper {
+    border: 1px solid black;
+    height: 44vh;
 }

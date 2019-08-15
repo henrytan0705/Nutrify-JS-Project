@@ -23,12 +23,17 @@ EDAMAM is a free available API that return the nutrional breakdown values of giv
 # Implementation Timeline
 ## 8/13 Tuesday 
 * Research D3 charts
+* Research Chart.js
+* Fetch data from API
+* Format/filter necessary data for charts
 
 ## 8/14 Wednesday
-* Fetch data and start formatting with JS
+* Find new API to replace down API
+* Format/filter new data
+* Start structuring design layout
 
 ## 8/15 Thursday
-* Structure data using D3
+* 
 
 ## 8/16 Friday
 * Implement CSS styling and effects accordingly

@@ -12,37 +12,39 @@
 
 <body>
 
-<div class="form-chart-wrapper">
+<div class="layout-wrapper">
+
     <div class="form-wrapper">
-     <form class="food-form">
-         <div class="form-content">
-            <h1>Food Form</h1>
-            <textarea id="formValue" rows="45" cols="30"></textarea>
-            <input class="form-button" type="submit" />
-         </div>
-      
+        <form class="food-form">
+            <div class="form-content">
+                <h1 class="form-title">Food Form</h1>
+                <textarea id="formValue" class = "form-textarea" rows="45" cols="30"></textarea>
+                <input class="form-button" type="submit" />
+            </div>
         </form>
     </div>
 
-    <div class="food-list">
-        <h1>Food List</h1>
-        
-    </div>
-    
-    <div class="chart-container">
-        <canvas id="polarChart"></canvas>
+    <div class="food-list-wrapper">
+        <div class="food-list">
+            <h1 class="food-list-title">Food List</h1>
+            <div id="food" class="list"></div>
+        </div>
     </div>
 
-    
+    <div class="charts-wrapper">
+        <div class="nutrition-chart-wrapper">
+            <h1 class="nutrition-chart-title">Nutritional Breakdown</h1>
+            <canvas id="nutrition"></canvas>
+        </div>
+        
+        <div class="health-chart-wrapper">
+            <canvas id="health"></canvas>
+        </div>
+ 
+    </div>
+  
 </div>
 
-<!-- 
-    <div class="food-list">
-        <div>
-            
-        </div>
-    </div> -->
-    
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>

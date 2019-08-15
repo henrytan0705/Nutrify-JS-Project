@@ -6,6 +6,11 @@ document.addEventListener("submit", (e) => {
     chart = null;
     e.preventDefault();
     let formValue = document.getElementById("formValue").value;
+    let foodList = document.getElementById("food");
+
+    while (foodList.firstChild) {
+        foodList.removeChild(foodList.firstChild);
+    }
 
     let foodData = {
         "query": formValue,
@@ -36,12 +41,15 @@ document.addEventListener("submit", (e) => {
     //     "timezone": "US/Eastern"
     // };
 
+    let typesOfFood;
+
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
         .then(data => {
-            var typesOfFood = Object.values(data.foods).map(i => i.food_name);
+            typesOfFood = Object.values(data.foods).map(i => i.food_name);
+            let totalCalories = 0; 
+            let nutritionTypes = ["Protein", "Carbohydrates", "Fats", "Sodium", "Cholesterol", "Sugar"];
 
             let nutritionalData = {
-                // totalCalories: 0,
                 totalProtein: 0,
                 totalCarbs: 0,
                 totalFat: 0,
@@ -49,11 +57,9 @@ document.addEventListener("submit", (e) => {
                 totalCholesterol: 0,
                 totalSugar: 0
             }
-            
-            let nutritionTypes = ["Protein", "Carbohydrates", "Fats", "Sodium", "Cholesterol", "Sugar"];
 
             for (let i = 0; i < data.foods.length; i++) {
-                // nutritionalData.totalCalories += data.foods[i].nf_calories;
+                totalCalories += data.foods[i].nf_calories;
                 nutritionalData.totalCholesterol += data.foods[i].nf_cholesterol;
                 nutritionalData.totalProtein += data.foods[i].nf_protein;
                 nutritionalData.totalFat += data.foods[i].nf_total_fat;
@@ -62,9 +68,9 @@ document.addEventListener("submit", (e) => {
                 nutritionalData.totalSugar += data.foods[i].nf_sugars;
             }
 
-            debugger
+            // debugger
 
-            let ctx = document.getElementById("polarChart");
+            let ctx = document.getElementById("nutrition");
             chart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
@@ -105,6 +111,16 @@ document.addEventListener("submit", (e) => {
                 },
 
             });
+
+        // let foodList = document.getElementById("food");
+
+            for (let i = 0; i < typesOfFood.length; i++) {
+                let food = document.createElement("h1");
+                food.appendChild(document.createTextNode(`${typesOfFood[i]}`));
+                // console.log(food);
+                foodList.appendChild(food);
+            }
+            
         })
         .catch(error => {
             // debugger
