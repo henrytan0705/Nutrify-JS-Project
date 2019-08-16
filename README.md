@@ -33,10 +33,14 @@ EDAMAM is a free available API that return the nutrional breakdown values of giv
 * Start structuring design layout
 
 ## 8/15 Thursday
-* 
+* Researching D3 Liquid Fill Gauge
+* Structuring design layout
 
 ## 8/16 Friday
+* Implementing D3 Liquid Fill Gauge 
+* Structuring design layout
+
+## 8/17 Saturday
 * Implement CSS styling and effects accordingly
 
-# Bonus Features
-- Comparison between two ingredient lists
+

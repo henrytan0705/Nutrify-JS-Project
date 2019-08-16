@@ -1,15 +1,29 @@
 var chart = null;
+// var gauge1 = null;
 
 document.addEventListener("submit", (e) => {
     if (chart !== null) chart.destroy();
 
+    // if (gauge1 !== null) {
+    //     gauge1 = null;
+    //     debugger
+    //     // gauge1.destroy();
+    // }
+
     e.preventDefault();
     let formValue = document.getElementById("formValue").value;
     let foodList = document.getElementById("food");
+    // let gauges = document.getElementById("gauges");
 
     while (foodList.firstChild) {
         foodList.removeChild(foodList.firstChild);
     }
+    // debugger
+
+    // while (gauges.firstChild) {
+    //     // debugger
+    //     gauges.removeChild(gauges.firstChild);
+    // }
 
     let foodData = {
         "query": formValue,
@@ -51,6 +65,7 @@ document.addEventListener("submit", (e) => {
                 totalSugar: 0
             }
 
+            // debugger
             for (let i = 0; i < data.foods.length; i++) {
                 totalCalories += data.foods[i].nf_calories;
                 nutritionalData.totalCholesterol += data.foods[i].nf_cholesterol;
@@ -110,26 +125,37 @@ document.addEventListener("submit", (e) => {
                 food.appendChild(document.createTextNode(`${typesOfFood[i]}`));
                 food.classList.add("food-item")
                 foodList.appendChild(food);
-            }             
 
-            let gauge1 = loadLiquidFillGauge("calories", (totalCalories/ 2000) * 100)
-            let config1 = liquidFillGaugeDefaultSettings();
+                // let gaugeA = document.createElement("svg");
+                // gaugeA.setAttribute("id", `${typesOfFood[i]}`)
+                // gauges.appendChild(gaugeA);
+            }         
+
+            // let gaugeA = document.createElement("svg");
+            // gaugeA.setAttribute("id", "calories");
+            // gaugeA.setAttribute("height", "250px");
+            // gaugeA.setAttribute("width", "20%");
+            // gauges.appendChild(gaugeA);
+
             // debugger
-            config1.circleColor = "#FF7777";
+
+            let config1 = liquidFillGaugeDefaultSettings();
+            config1.circleColor = "lightblue";
             config1.textColor = "#FF4444";
             config1.waveTextColor = "#FFAAAA";
-            config1.waveColor = "#FFDDDD";
+            config1.waveColor = "lightblue";
             config1.circleThickness = 0.2;
             config1.textVertPosition = 0.2;
             config1.waveAnimateTime = 1000;
-            let gauge2 = loadLiquidFillGauge("protein", 28, config1);
+
+            let gauge1 = loadLiquidFillGauge("calories", (totalCalories / 2000) * 100, config1);
+            // debugger
+            
             // var config2 = liquidFillGaugeDefaultSettings();
         })
         .catch(error => {
            return console.log(error);
         })
-        
-        
-
-        
+  
 })
+
