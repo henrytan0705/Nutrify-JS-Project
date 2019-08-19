@@ -1,92 +1,22 @@
-/* .layout-wrapper {
-    display: flex;
-    border: 1px solid black;
-    width: 90%;
-    height: 80vh;
+body {
+    background-color: #4D5382;
 }
-
-.form-wrapper {
-    margin: 0 50px;
-}
-
-.food-form {
-    border: 1px solid green;
-    width: 100%
-}
-
-.form-content {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    text-align: center;
-}
-
-.form-title {
-    border: 1px solid black;
-}
-
-.form-textarea {
-    background-color: blue;
-} */
-
-/*---------------------------------------------*/
-
-/* .food-list-wrapper {
-    display: block;
-    border: 1px solid red;
-    text-align: center;
-    margin: 0 30px;
-}
-
-.food-list {
-    width: 20vw;
-    height: 40vh;
-} */
-
-/*---------------------------------------------*/
-
-
-/* .nutrition-chart-wrapper {
-    height: 40vh;
-    width: 40vw;
-    border: 1px solid black;
-    margin: 0 20px;
-    text-align: center;
-}
-
-.nutrition-chart-title {
-    border: 1px solid black;
-}
-
-#nutrition {
-    height: 100%;
-} */
-
-/*---------------------------------------------*/
-
-/* .nutrition-chart-wrapper {
-    border: 1px solid black;
-    height: 200px;
-    width: 200px;
-} */
-
-/*------------------------------------------------------------------------*/
 
 .layout-wrapper {
     display: grid;
     grid-template-columns: 30% 70%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 90vw;
     height: 90vh;
     position: absolute;
-    top: 5vh;
+    top: 0;
     left: 5vw;
 }
 
 /*---------------------------------------------*/
 
 .form-wrapper {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: center;
     height: 45vh;
     display: flex;
@@ -99,7 +29,7 @@
     flex-direction: column;
     align-items: center;
     /* margin-top: 5vh; */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 40vh;
     width: 100%;
     overflow: hidden;
@@ -109,10 +39,14 @@
 .form-title {
     text-decoration: underline;
 }
+
+.form-textarea {
+    background-color: gray;
+}
 /*---------------------------------------------*/
 
 .food-list-wrapper {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     text-align: center;
     height: 40vh;
     /* margin: 5vh 0; */
@@ -140,6 +74,10 @@
     /* border: 1px solid black; */
 }
 
+.list-display {
+    background-color:gray;
+}
+
 .food-item {
     margin-left: 15px;
 }
@@ -155,13 +93,12 @@
 }
 
 .nutrition-chart-wrapper {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 45vh;
     width: 100%;
-    margin-bottom: 2vh;
-    /* padding-bottom: 10vh; */
-    display: inline-block;
-    /* overflow: hidden; */
+    /* margin-bottom: 2vh; */
+    display: block;
+    /* padding: 0 2.5vw; */
 }
 
 .nutrition-chart-title {
@@ -169,18 +106,89 @@
 }
 
 #nutrition {
-    /* max-height: 40vh; */
-    border: 1px solid gray;
+    max-height: 40vh;
+    max-width: 40vw;
+    /* border: 1px solid gray; */
+    margin: 0 12.5vw;
 }
+
 /*---------------------------------------------*/
 
 .percentage-chart-wrapper {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 44vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.percentage-chart-title {
+    font-size: 30px;
+    margin: 0;
+    text-align: left;
+}
+
+.calories-gauge {
+    /* background-color: lightcoral; */
+    /* border: 1px solid red; */
+    height: 100%;
+    /* width: 20vw; */
+    /* width: 100%; */
+}
+
+.calories {
+    /* border: 1px solid red; */
+    height: 250px;
+    width: 10vw;
+    overflow: visible;
+    /* display: block; */
+}
+
+.sub-gauges {
+    /* border: 1px solid green; */
+    display: block;
+    height: 44vh;
+}
+
+.top-gauges {
+    /* border: 1px solid blue; */
+    height: 50%;
+    display: flex;
+}
+
+.bottom-gauges {
+    /* border: 1px solid red; */
+    height: 50%;
+    display: flex;
+}
+
+.sub-gauge {
+    height: 100%;
+    width: 33%;
+    /* border: 1px solid black; */
     display: block;
 }
 
-#calories {
-    /* background-color: lightcoral; */
-    border: 1px solid red;
+.sub-gauge-title {
+    font-size: 16px;
+}
+
+
+.liquidFillGaugeText { 
+    font-family: Helvetica; 
+    font-weight: bold; 
+    font-size: 20px;
+}
+
+@media screen and (min-width:900px) {
+    .liquidFillGaugeText { 
+        width: 5vw;
+    }
+}
+
+.gauge-size {
+    width: 10vw;
+    align-items: center;
+    /* border: 1px solid red; */
+    /* display: inline-block; */
+    overflow: visible;
 }

@@ -1,14 +1,14 @@
 var chart = null;
-// var gauge1 = null;
+var gauge1 = null;
+var gauge2 = null;
+var gauge3 = null;
+var gauge4 = null;
+var gauge5 = null;
+var gauge6 = null;
+var gauge7 = null;
 
 document.addEventListener("submit", (e) => {
     if (chart !== null) chart.destroy();
-
-    // if (gauge1 !== null) {
-    //     gauge1 = null;
-    //     debugger
-    //     // gauge1.destroy();
-    // }
 
     e.preventDefault();
     let formValue = document.getElementById("formValue").value;
@@ -18,12 +18,6 @@ document.addEventListener("submit", (e) => {
     while (foodList.firstChild) {
         foodList.removeChild(foodList.firstChild);
     }
-    // debugger
-
-    // while (gauges.firstChild) {
-    //     // debugger
-    //     gauges.removeChild(gauges.firstChild);
-    // }
 
     let foodData = {
         "query": formValue,
@@ -65,7 +59,6 @@ document.addEventListener("submit", (e) => {
                 totalSugar: 0
             }
 
-            // debugger
             for (let i = 0; i < data.foods.length; i++) {
                 totalCalories += data.foods[i].nf_calories;
                 nutritionalData.totalCholesterol += data.foods[i].nf_cholesterol;
@@ -85,13 +78,12 @@ document.addEventListener("submit", (e) => {
                         label: 'Nutritional Breakdown',
                         data: Object.values(nutritionalData),
                         backgroundColor: [
-                            'rgba(255,0,0,.7)',
-                            'rgba(100,50,0,.7)',
-                            'rgba(0,100,100,.7)',
-                            'rgba(150,0,0,.7)',
-                            'rgba(0,50,0,.7)',
-                            'rgba(0,0,200,.7)',
-                            'rgba(100,100,100,.7)'
+                            '#082342',
+                            '#f3d0b0',
+                            '#e2705a',
+                            '#242323',
+                            '#6ca339',
+                            '#cde6fd'
                         ],
                         borderColor: [
                             '#000',
@@ -117,41 +109,101 @@ document.addEventListener("submit", (e) => {
                 },
 
             });
-
-        // let foodList = document.getElementById("food");
+            // debugger
 
             for (let i = 0; i < typesOfFood.length; i++) {
                 let food = document.createElement("h1");
                 food.appendChild(document.createTextNode(`${typesOfFood[i]}`));
                 food.classList.add("food-item")
                 foodList.appendChild(food);
-
-                // let gaugeA = document.createElement("svg");
-                // gaugeA.setAttribute("id", `${typesOfFood[i]}`)
-                // gauges.appendChild(gaugeA);
             }         
 
-            // let gaugeA = document.createElement("svg");
-            // gaugeA.setAttribute("id", "calories");
-            // gaugeA.setAttribute("height", "250px");
-            // gaugeA.setAttribute("width", "20%");
-            // gauges.appendChild(gaugeA);
-
-            // debugger
-
             let config1 = liquidFillGaugeDefaultSettings();
-            config1.circleColor = "lightblue";
-            config1.textColor = "#FF4444";
-            config1.waveTextColor = "#FFAAAA";
-            config1.waveColor = "lightblue";
+            config1.circleColor = "#00237c";
+            config1.textColor = "blue";
+            config1.waveTextColor = "white";
+            config1.waveColor = "#00237c";
             config1.circleThickness = 0.2;
             config1.textVertPosition = 0.2;
             config1.waveAnimateTime = 1000;
-
-            let gauge1 = loadLiquidFillGauge("calories", (totalCalories / 2000) * 100, config1);
-            // debugger
             
+            let config2 = liquidFillGaugeDefaultSettings();
+            config2.circleColor = "#082342";
+            config2.textColor = "black";
+            config2.waveTextColor = "white";
+            config2.waveColor = "#082342";
+            config2.circleThickness = 0.2;
+            config2.textVertPosition = 0.2;
+            config2.waveAnimateTime = 1000;
+
+            let config3 = liquidFillGaugeDefaultSettings();
+            config3.circleColor = "#f3d0b0";
+            config3.textColor = "black";
+            config3.waveTextColor = "gray";
+            config3.waveColor = "#f3d0b0";
+            config3.circleThickness = 0.2;
+            config3.textVertPosition = 0.2;
+            config3.waveAnimateTime = 1000;
+
+            let config4 = liquidFillGaugeDefaultSettings();
+            config4.circleColor = "#e2705a";
+            config4.textColor = "white";
+            config4.waveTextColor = "pink";
+            config4.waveColor = "#e2705a";
+            config4.circleThickness = 0.2;
+            config4.textVertPosition = 0.2;
+            config4.waveAnimateTime = 1000;
+
+            let config5 = liquidFillGaugeDefaultSettings();
+            config5.circleColor = "#242323";
+            config5.textColor = "black";
+            config5.waveTextColor = "white";
+            config5.waveColor = "#242323";
+            config5.circleThickness = 0.2;
+            config5.textVertPosition = 0.2;
+            config5.waveAnimateTime = 1000;
+
+            let config6 = liquidFillGaugeDefaultSettings();
+            config6.circleColor = "#6ca339";
+            config6.textColor = "green";
+            config6.waveTextColor = "white";
+            config6.waveColor = "#6ca339";
+            config6.circleThickness = 0.2;
+            config6.textVertPosition = 0.2;
+            config6.waveAnimateTime = 1000;
+
+            let config7 = liquidFillGaugeDefaultSettings();
+            config7.circleColor = "#cde6fd";
+            config7.textColor = "black";
+            config7.waveTextColor = "blue";
+            config7.waveColor = "#cde6fd";
+            config7.circleThickness = 0.2;
+            config7.textVertPosition = 0.2;
+            config7.waveAnimateTime = 1000;
+            
+
             // var config2 = liquidFillGaugeDefaultSettings();
+
+            //update gauge upon new submits
+            if (gauge1) {
+                gauge1.update((totalCalories/2000) * 100)
+                gauge2.update((nutritionalData.totalProtein / 50)  * 100)
+                gauge3.update((nutritionalData.totalCarbs / 300) * 100)
+                gauge4.update((nutritionalData.totalFat / 65) * 100)
+                gauge5.update((nutritionalData.totalSodium / 2400) * 100)
+                gauge6.update((nutritionalData.totalCholesterol / 300) * 100)
+                gauge7.update((nutritionalData.totalSugar / 50) * 100)
+            } else {
+                gauge1 = loadLiquidFillGauge("calories", (totalCalories / 2000) * 100, config1);
+                gauge2 = loadLiquidFillGauge("protein", (nutritionalData.totalProtein / 50) * 100, config2);
+                gauge3 = loadLiquidFillGauge("carbs", (nutritionalData.totalCarbs / 300) * 100, config3);
+                gauge4 = loadLiquidFillGauge("fats", (nutritionalData.totalFat / 65) * 100, config4);
+                gauge5 = loadLiquidFillGauge("sodium", (nutritionalData.totalSodium / 2400) * 100, config5);
+                gauge6 = loadLiquidFillGauge("cholesterol", (nutritionalData.totalCholesterol / 300) * 100, config6);
+                gauge7 = loadLiquidFillGauge("sugar", (nutritionalData.totalSugar / 50) * 100, config7);
+            }
+            
+            
         })
         .catch(error => {
            return console.log(error);

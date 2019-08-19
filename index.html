@@ -11,7 +11,7 @@
     <script src="src/fill_gauge.js" language="JavaScript"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
-    <script src="src/index.js"></script>
+
 </head>
 
 
@@ -34,35 +34,72 @@
 
         <div class="food-list-wrapper">
             <div class="food-list">
-                <h1 class="food-list-title">Food List</h1>
-                <div id="food" class="list"></div>
+                <h1 class="food-list-title">Items List</h1>
+                <div class="list-display">
+                    <div id="food" class="list"></div>
+                </div>
             </div>
         </div>
     </div>
 
-
+    
     <div class="charts-wrapper">
         <div class="nutrition-chart-wrapper">
             <h1 class="nutrition-chart-title">Nutritional Breakdown(g)</h1>
             <canvas id="nutrition"></canvas>
         </div>
         
-        <div id="gauges" class="percentage-chart-wrapper">
-            <svg id="calories" height="250px" width="20%"></svg>
+        <!-- <h1 class="percentage-chart-title">FDA Daily Nutrition Diet Comparison</h1> -->
+        <div class="percentage-chart-wrapper">
+            <div class="calories-gauge">
+                <h1>Calories</h1>
+                <svg id="calories" class="calories"></svg>
+            </div>
+            <div class="sub-gauges">
+                <div class="top-gauges">
+                    <div class="sub-gauge" >
+                        <h1 class="sub-gauge-title">Protein</h1>
+                        <svg class="gauge-size" id="protein"></svg>
+                    </div>
+                   
+                    <div class="sub-gauge" >
+                        <h1 class="sub-gauge-title">Carbohydrates</h1>
+                        <svg class="gauge-size" id="carbs" ></svg>
+                    </div>
+                    
+                    <div class="sub-gauge" >
+                        <h1 class="sub-gauge-title">Fats</h1>
+                        <svg class="gauge-size" id="fats" ></svg>
+                    </div>
+                    
+                </div>
 
-            <!-- <svg id="protein" height="200px" width="15%"></svg> 
-            <svg id="carbs" height="200px" width="15%"></svg>
-            <svg id="fats" height="200px" width="15%"></svg>
-            <svg id="sodium" height="200px" width="15%"></svg>
-            <svg id="cholesterol" height="200px" width="15%"></svg>
-            <svg id="sugar" height="200px" width="15%"></svg>  -->
+                <div class="bottom-gauges">
+                    <div class="sub-gauge" >
+                        <h1 class="sub-gauge-title">Sodium</h1>
+                        <svg class="gauge-size" id="sodium" ></svg>
+                    </div>
+
+                    <div class="sub-gauge" >
+                        <h1 class="sub-gauge-title">cholesterol</h1>
+                        <svg class="gauge-size" id="cholesterol" ></svg>
+                    </div>
+
+                    <div class="sub-gauge" >
+                        <h1 class="sub-gauge-title">Sugar</h1>
+                        <svg class="gauge-size" id="sugar" ></svg>
+                    </div>
+                    
+                </div>
+                
+            </div>
 
         </div>
  
     </div>
 
    
-
+    <script src="src/index.js"></script>
   
 </div>
 
