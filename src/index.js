@@ -142,7 +142,7 @@ document.addEventListener("submit", (e) => {
 
             let config1 = liquidFillGaugeDefaultSettings();
             config1.circleColor = "#00237c";
-            config1.textColor = "blue";
+            config1.textColor = "black";
             config1.waveTextColor = "white";
             config1.waveColor = "#00237c";
             config1.circleThickness = 0.2;
