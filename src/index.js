@@ -118,6 +118,28 @@ document.addEventListener("submit", (e) => {
                 foodList.appendChild(food);
             }         
 
+            let caloriesDisplay = document.getElementById("calories-display");
+            caloriesDisplay.textContent += `Calories (${totalCalories})`;
+
+            let proteinDisplay = document.getElementById("protein-display");
+            proteinDisplay.textContent += `Protein (${nutritionalData.totalProtein}g)`;
+
+            let carbsDisplay = document.getElementById("carb-display");
+            carbsDisplay.textContent += `Carbs (${nutritionalData.totalCarbs}g)`;
+
+            let fatDisplay = document.getElementById("fat-display");
+            fatDisplay.textContent += `Fat (${nutritionalData.totalFat}g)`;
+
+            let sodiumDisplay = document.getElementById("sodium-display");
+            sodiumDisplay.textContent += `Sodium (${nutritionalData.totalSodium}g)`;
+
+            let cholDisplay = document.getElementById("chol-display");
+            cholDisplay.textContent += `Cholesterol (${nutritionalData.totalCholesterol}g)`;
+
+            let sugarDisplay = document.getElementById("sugar-display");
+            sugarDisplay.textContent += `Sugar (${nutritionalData.totalSugar}g)`;
+
+
             let config1 = liquidFillGaugeDefaultSettings();
             config1.circleColor = "#00237c";
             config1.textColor = "blue";
