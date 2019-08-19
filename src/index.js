@@ -119,25 +119,25 @@ document.addEventListener("submit", (e) => {
             }         
 
             let caloriesDisplay = document.getElementById("calories-display");
-            caloriesDisplay.textContent = `Calories (${totalCalories})`;
+            caloriesDisplay.textContent = `Calories (${parseFloat(totalCalories).toFixed(2)})`;
 
             let proteinDisplay = document.getElementById("protein-display");
-            proteinDisplay.textContent = `Protein (${nutritionalData.totalProtein}g)`;
+            proteinDisplay.textContent = `Protein (${parseFloat(nutritionalData.totalProtein).toFixed(2)}g)`;
 
             let carbsDisplay = document.getElementById("carb-display");
-            carbsDisplay.textContent = `Carbs (${nutritionalData.totalCarbs}g)`;
+            carbsDisplay.textContent = `Carbs (${parseFloat(nutritionalData.totalCarbs).toFixed(2)}g)`;
 
             let fatDisplay = document.getElementById("fat-display");
-            fatDisplay.textContent = `Fat (${nutritionalData.totalFat}g)`;
+            fatDisplay.textContent = `Fat (${parseFloat(nutritionalData.totalFat).toFixed(2)}g)`;
 
             let sodiumDisplay = document.getElementById("sodium-display");
-            sodiumDisplay.textContent = `Sodium (${nutritionalData.totalSodium}g)`;
+            sodiumDisplay.textContent = `Sodium (${parseFloat(nutritionalData.totalSodium).toFixed(2)}g)`;
 
             let cholDisplay = document.getElementById("chol-display");
-            cholDisplay.textContent = `Cholesterol (${nutritionalData.totalCholesterol}g)`;
+            cholDisplay.textContent = `Cholesterol (${parseFloat(nutritionalData.totalCholesterol).toFixed(2)}g)`;
 
             let sugarDisplay = document.getElementById("sugar-display");
-            sugarDisplay.textContent = `Sugar (${nutritionalData.totalSugar}g)`;
+            sugarDisplay.textContent = `Sugar (${parseFloat(nutritionalData.totalSugar).toFixed(2)}g)`;
 
 
             let config1 = liquidFillGaugeDefaultSettings();
