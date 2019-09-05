@@ -7,6 +7,17 @@ var gauge5 = null;
 var gauge6 = null;
 var gauge7 = null;
 
+document.addEventListener("DOMContentLoaded", () => {
+    let submitButton = document.getElementsByClassName("form-button")[0];
+
+    let inputArea = document.getElementById("formValue");
+    inputArea.addEventListener("keydown", event => {
+        if (event.keyCode === 13) {
+            submitButton.click();
+        }
+    })
+})
+
 document.addEventListener("submit", (e) => {
     if (chart !== null) chart.destroy();
 
@@ -232,4 +243,3 @@ document.addEventListener("submit", (e) => {
         })
   
 })
-

@@ -158,7 +158,7 @@ body {
 }
 
 .sub-gauge {
-    height: 100%;
+    /* height: 100%; */
     width: 33%;
     min-width: 125px;
     display: block;
@@ -188,4 +188,16 @@ body {
     /* border: 1px solid red; */
     /* display: inline-block; */
     /* overflow: visible; */
+}
+
+
+
+/*-----*/
+
+.instructions {
+    height: 150px;
+}
+
+h4 {
+    margin: 4px 0;
 }
