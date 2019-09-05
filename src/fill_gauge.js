@@ -165,6 +165,11 @@ function loadLiquidFillGauge(id, value, config) {
         .style("fill", config.waveColor);
 
     //Text not inside liquid/ behind front text
+
+    // if (fillPercent >= 1) {
+    //     config.waveTextColor = "red";
+    // } 
+
     let textInLiquid = fillCircleGroup.append("text")
         .text(round(percentageStartingCount) + percentSignDisplay)
         .attr("class", "liquidFillGaugeText")
@@ -172,6 +177,7 @@ function loadLiquidFillGauge(id, value, config) {
         .attr("font-size", percentageTextSize + "px")
         .style("fill", config.waveTextColor)
         .attr("transform", "translate(" + radius + "," + raisePercentageScale(config.textVertPosition) + ")")
+
 
     // Percentage animation 
     if (config.valueCountUp) {
@@ -190,6 +196,8 @@ function loadLiquidFillGauge(id, value, config) {
             .duration(config.waveRiseTime)
             .tween("text", text);
     }
+
+    
 
 
     let waveGroupXPosition = fillInGapMargin + fillCircleRadius * 2 - waveClipWidth;
@@ -259,6 +267,7 @@ function loadLiquidFillGauge(id, value, config) {
             let waveScaleX = d3.scale.linear().range([0, waveClipWidth]).domain([0, 1]);
             let waveScaleY = d3.scale.linear().range([0, waveHeight]).domain([0, 1]);
             let newClipArea;
+
             if (config.waveHeightScaling) {
                 newClipArea = d3.svg.area()
                     .x(function (d) { return waveScaleX(d.x); })

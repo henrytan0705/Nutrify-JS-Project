@@ -1,5 +1,6 @@
 body {
-    background-color: #4D5382;
+    /* background-color: #DCCFEC; */
+    background-color: #F7EDF0;
 }
 
 .layout-wrapper {
@@ -11,6 +12,11 @@ body {
     position: absolute;
     top: 0;
     left: 5vw;
+}
+
+.food-form-list-wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 /*---------------------------------------------*/
@@ -41,7 +47,7 @@ body {
 }
 
 .form-textarea {
-    background-color: gray;
+    /* background-color: gray; */
 }
 /*---------------------------------------------*/
 
@@ -75,7 +81,7 @@ body {
 }
 
 .list-display {
-    background-color:gray;
+    /* background-color:gray; */
 }
 
 .food-item {
@@ -145,27 +151,18 @@ body {
 
 .sub-gauges {
     /* border: 1px solid green; */
-    display: block;
-    height: 44vh;
-}
-
-.top-gauges {
-    /* border: 1px solid blue; */
-    height: 50%;
     display: flex;
-}
-
-.bottom-gauges {
-    /* border: 1px solid red; */
-    height: 50%;
-    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* height: 44vh; */
 }
 
 .sub-gauge {
     height: 100%;
     width: 33%;
-    /* border: 1px solid black; */
+    min-width: 125px;
     display: block;
+    /* border: 1px solid black; */
 }
 
 .sub-gauge-title {
@@ -179,16 +176,16 @@ body {
     font-size: 20px;
 }
 
-@media screen and (min-width:900px) {
+/* @media screen and (min-width:900px) {
     .liquidFillGaugeText { 
         width: 5vw;
     }
-}
+} */
 
 .gauge-size {
-    width: 10vw;
+    /* width: 10vw; */
     align-items: center;
     /* border: 1px solid red; */
     /* display: inline-block; */
-    overflow: visible;
+    /* overflow: visible; */
 }

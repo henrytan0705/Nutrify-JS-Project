@@ -113,7 +113,7 @@ document.addEventListener("submit", (e) => {
 
             for (let i = 0; i < typesOfFood.length; i++) {
                 let food = document.createElement("h1");
-                food.appendChild(document.createTextNode(`${typesOfFood[i]}`));
+                food.appendChild(document.createTextNode(`- ${typesOfFood[i]}`));
                 food.classList.add("food-item")
                 foodList.appendChild(food);
             }         
@@ -169,7 +169,7 @@ document.addEventListener("submit", (e) => {
 
             let config4 = liquidFillGaugeDefaultSettings();
             config4.circleColor = "#e2705a";
-            config4.textColor = "white";
+            config4.textColor = "black";
             config4.waveTextColor = "pink";
             config4.waveColor = "#e2705a";
             config4.circleThickness = 0.2;
@@ -188,7 +188,7 @@ document.addEventListener("submit", (e) => {
             let config6 = liquidFillGaugeDefaultSettings();
             config6.circleColor = "#6ca339";
             config6.textColor = "green";
-            config6.waveTextColor = "white";
+            config6.waveTextColor = "black";
             config6.waveColor = "#6ca339";
             config6.circleThickness = 0.2;
             config6.textVertPosition = 0.2;
