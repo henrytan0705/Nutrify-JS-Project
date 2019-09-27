@@ -58,6 +58,11 @@ document.addEventListener("submit", (e) => {
 
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
         .then(data => {
+            if (!!document.getElementsByClassName("error")[0]) {
+                debugger
+                let error = document.getElementsByClassName("error")[0];
+                error.remove();
+            }
             typesOfFood = Object.values(data.foods).map(i => i.food_name);
             let totalCalories = 0; 
             let nutritionTypes = ["Protein", "Carbohydrates", "Fats", "Sodium", "Cholesterol", "Sugar"];
@@ -150,7 +155,6 @@ document.addEventListener("submit", (e) => {
             let sugarDisplay = document.getElementById("sugar-display");
             sugarDisplay.textContent = `Sugar (${parseFloat(nutritionalData.totalSugar).toFixed(2)}g)`;
 
-
             let config1 = liquidFillGaugeDefaultSettings();
             config1.circleColor = "#00237c";
             config1.textColor = "black";
@@ -160,6 +164,7 @@ document.addEventListener("submit", (e) => {
             config1.textVertPosition = 0.2;
             config1.waveAnimateTime = 1000;
             
+            debugger
             let config2 = liquidFillGaugeDefaultSettings();
             config2.circleColor = "#082342";
             config2.textColor = "black";
@@ -218,7 +223,9 @@ document.addEventListener("submit", (e) => {
             // var config2 = liquidFillGaugeDefaultSettings();
 
             //update gauge upon new submits
-            if (gauge1) {
+            debugger
+            if (!!gauge1) {
+                debugger
                 gauge1.update((totalCalories/2000) * 100)
                 gauge2.update((nutritionalData.totalProtein / 50)  * 100)
                 gauge3.update((nutritionalData.totalCarbs / 300) * 100)
@@ -227,6 +234,7 @@ document.addEventListener("submit", (e) => {
                 gauge6.update((nutritionalData.totalCholesterol / 300) * 100)
                 gauge7.update((nutritionalData.totalSugar / 50) * 100)
             } else {
+                debugger
                 gauge1 = loadLiquidFillGauge("calories", (totalCalories / 2000) * 100, config1);
                 gauge2 = loadLiquidFillGauge("protein", (nutritionalData.totalProtein / 50) * 100, config2);
                 gauge3 = loadLiquidFillGauge("carbs", (nutritionalData.totalCarbs / 300) * 100, config3);
@@ -236,10 +244,63 @@ document.addEventListener("submit", (e) => {
                 gauge7 = loadLiquidFillGauge("sugar", (nutritionalData.totalSugar / 50) * 100, config7);
             }
             
+            debugger
             
         })
         .catch(error => {
-           return console.log(error);
+            // let donut = document.getElementById("nutrition");
+            // donut.remove();
+            // debugger
+
+            let caloriesDisplay = document.getElementById("calories-display");
+            caloriesDisplay.textContent = "";
+
+            let proteinDisplay = document.getElementById("protein-display");
+            proteinDisplay.textContent = "";
+
+            let carbsDisplay = document.getElementById("carb-display");
+            carbsDisplay.textContent = "";
+
+            let fatDisplay = document.getElementById("fat-display");
+            fatDisplay.textContent = "";
+
+            let sodiumDisplay = document.getElementById("sodium-display");
+            sodiumDisplay.textContent = "";
+
+            let cholDisplay = document.getElementById("chol-display");
+            cholDisplay.textContent = "";
+
+            let sugarDisplay = document.getElementById("sugar-display");
+            sugarDisplay.textContent = "";
+
+            let gauges = document.querySelectorAll("svg");
+
+            for (let i = 0; i < gauges.length; i++) {
+                debugger
+                while (gauges[i].firstChild) {
+                    debugger
+                    gauges[i].removeChild(gauges[i].firstChild);
+                }
+            }
+            // debugger
+
+            gauge1 = null;
+            gauge2 = null;
+            gauge3 = null;
+            gauge4 = null;
+            gauge5 = null;
+            gauge6 = null;
+            gauge7 = null
+
+            let message = document.createElement("h1");
+            message.classList.add("error");
+            message.appendChild(document.createTextNode("No results found in input"));
+
+            let display = document.getElementsByClassName("nutrition-chart-wrapper")[0];
+            display.appendChild(message);
+
+
+        
         })
   
 })
