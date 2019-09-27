@@ -297,7 +297,8 @@ document.addEventListener("submit", (e) => {
 
             let message = document.createElement("h1");
             message.classList.add("error");
-            message.appendChild(document.createTextNode("No results found in input"));
+            let input = document.getElementById("formValue").value;
+            message.appendChild(document.createTextNode(`No results found in input: "${input}"`));
 
             let display = document.getElementsByClassName("nutrition-chart-wrapper")[0];
             display.appendChild(message);
