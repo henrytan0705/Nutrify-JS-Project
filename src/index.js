@@ -63,6 +63,9 @@ document.addEventListener("submit", (e) => {
                 let error = document.getElementsByClassName("error")[0];
                 error.remove();
             }
+
+            document.getElementById("item-list").classList.remove("hide-text");
+
             typesOfFood = Object.values(data.foods).map(i => i.food_name);
             let totalCalories = 0; 
             let nutritionTypes = ["Protein", "Carbohydrates", "Fats", "Sodium", "Cholesterol", "Sugar"];
@@ -299,6 +302,7 @@ document.addEventListener("submit", (e) => {
             let display = document.getElementsByClassName("nutrition-chart-wrapper")[0];
             display.appendChild(message);
 
+            document.getElementById("item-list").classList.add("hide-text");
 
         
         })

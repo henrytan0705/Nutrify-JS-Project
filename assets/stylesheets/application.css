@@ -74,6 +74,10 @@ body {
     text-decoration: underline;
 }
 
+.hide-text {
+    display: none;
+}
+
 .list {
     display: block;
     text-align: left;
