@@ -104,7 +104,6 @@ document.addEventListener("submit", function (e) {
 
     // if (gauge1 !== null) {
     //     gauge1 = null;
-    //     debugger
     //     // gauge1.destroy();
     // }
 
@@ -116,10 +115,9 @@ document.addEventListener("submit", function (e) {
     while (foodList.firstChild) {
         foodList.removeChild(foodList.firstChild);
     }
-    // debugger
 
     // while (gauges.firstChild) {
-    //     // debugger
+
     //     gauges.removeChild(gauges.firstChild);
     // }
 
@@ -167,7 +165,7 @@ document.addEventListener("submit", function (e) {
             totalCholesterol: 0,
             totalSugar: 0
 
-            // debugger
+ 
         };for (var i = 0; i < data.foods.length; i++) {
             totalCalories += data.foods[i].nf_calories;
             nutritionalData.totalCholesterol += data.foods[i].nf_cholesterol;
@@ -215,7 +213,6 @@ document.addEventListener("submit", function (e) {
         // gaugeA.setAttribute("width", "20%");
         // gauges.appendChild(gaugeA);
 
-        // debugger
 
         var config1 = liquidFillGaugeDefaultSettings();
         config1.circleColor = "lightblue";
@@ -227,8 +224,6 @@ document.addEventListener("submit", function (e) {
         config1.waveAnimateTime = 1000;
 
         var gauge1 = loadLiquidFillGauge("calories", totalCalories / 2000 * 100, config1);
-        // debugger
-
         // var config2 = liquidFillGaugeDefaultSettings();
     }).catch(function (error) {
         return console.log(error);
