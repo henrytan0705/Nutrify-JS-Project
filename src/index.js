@@ -59,7 +59,6 @@ document.addEventListener("submit", (e) => {
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
         .then(data => {
             if (!!document.getElementsByClassName("error")[0]) {
-              
                 let error = document.getElementsByClassName("error")[0];
                 error.remove();
             }
@@ -67,6 +66,7 @@ document.addEventListener("submit", (e) => {
             document.getElementById("item-list").classList.remove("hide-text");
 
             typesOfFood = Object.values(data.foods).map(i => i.food_name);
+
             let totalCalories = 0; 
             let nutritionTypes = ["Protein", "Carbohydrates", "Fats", "Sodium", "Cholesterol", "Sugar"];
             let nutritionalData = {
@@ -136,6 +136,12 @@ document.addEventListener("submit", (e) => {
                 food.classList.add("food-item")
                 foodList.appendChild(food);
             }         
+
+            if (typesOfFood.length > 7) {
+               document.getElementById("list-section").style.overflow = "scroll";
+            } else {
+                document.getElementById("list-section").style.overflow = "none";
+            }
 
             let caloriesDisplay = document.getElementById("calories-display");
             caloriesDisplay.textContent = `Calories (${parseFloat(totalCalories).toFixed(2)})`;
@@ -296,8 +302,7 @@ document.addEventListener("submit", (e) => {
             display.appendChild(message);
 
             document.getElementById("item-list").classList.add("hide-text");
-
-        
+            document.getElementById("list-section").style.overflow = "none";
         })
   
 })
