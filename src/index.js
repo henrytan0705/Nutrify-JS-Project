@@ -138,9 +138,9 @@ document.addEventListener("submit", (e) => {
             }         
 
             if (typesOfFood.length > 7) {
-               document.getElementById("list-section").style.overflow = "scroll";
+               document.getElementById("list-section").style.overflowY = "scroll";
             } else {
-                document.getElementById("list-section").style.overflow = "none";
+                document.getElementById("list-section").style.overflowY = "none";
             }
 
             let caloriesDisplay = document.getElementById("calories-display");
@@ -302,7 +302,7 @@ document.addEventListener("submit", (e) => {
             display.appendChild(message);
 
             document.getElementById("item-list").classList.add("hide-text");
-            document.getElementById("list-section").style.overflow = "none";
+            document.getElementById("list-section").style.overflowY = "none";
         })
   
 })
