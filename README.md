@@ -3,7 +3,7 @@ Nutrify is a nutrional breakdown data visualization of a food items that users i
 Enjoying food is great, but we should also keep check of what we're eating and how much we're eating. Food nutrition is a vital factor in our health.
 This data reflects the nutrional values ingredients have and compares it the average intake one should have in a given day.
 
-Nutritionix is a free available API that return the nutrional breakdown values of given ingredients.
+Nutritionix is a free available API that filters user input and returns the nutrional breakdown values of given ingredients found within their database.
 
 # Functionality and MVP
 Users are able to:
