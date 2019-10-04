@@ -3,6 +3,8 @@ Nutrify is a nutrional breakdown data visualization of a food items that users i
 Enjoying food is great, but we should also keep check of what we're eating and how much we're eating. Food nutrition is a vital factor in our health.
 This data reflects the nutrional values ingredients have and compares it the average intake one should have in a given day.
 
+Nutritionix is a free available API that return the nutrional breakdown values of given ingredients.
+
 # Functionality and MVP
 Users are able to:
 - [ ] Enter an list of ingredients or a food log
@@ -13,13 +15,12 @@ Users are able to:
 ![Wireframe](./wireframe_image/wireframe.jpg) -->
 
 # Architecture and Technology
-Nutritionix is a free available API that return the nutrional breakdown values of given ingredients.
 
-- Javascript
-- D3.js 
-- HTML5
-- CSS3
-- Chart.js
+- Vanilla Javascript for handling the logic and shaping the data received from Nutritionix
+- D3.js for to inject data into the DOM to create liquid fill gauges and manipulate data
+- Chart.js to visualize data into simple, but elegant charts
+- CSS3 for styling the visualization
+- HTML5 for basic structure of layout
 
 <!-- # Implementation Timeline
 ## 8/13 Tuesday 
