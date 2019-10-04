@@ -21,6 +21,35 @@ Users are able to:
 - Chart.js to visualize data into simple, but elegant charts
 - CSS3 for styling the visualization
 - HTML5 for basic structure of layout
+- Webpack for bundling scripts for modular composition of Javascript files
+
+
+![](./assets/images/Nutrify.png)
+
+# Features
+
+Nutrify is a straight forward application, whereas users only have to input the data they want calculated and submit it.
+
+# Data Breakdown
+
+- User input is displayed using 2 types of diagrams 
+  * Donut Chart - A general representation of each nutrional category in comparison to each other in units of grams.
+  * Liquid Fill Gauges - Representing data with a liquid animation filling up in comparison to daily FDA nutrional diet.
+
+- Nutritonal Sections include:
+  * Calories
+  * Protein
+  * Carbs
+  * Fat
+  * Sodium
+  * Cholesterol
+  * Sugar
+
+- A list of ingredients will be generated as well to keep track of what has been calculated from the user's input
+
+
+
+
 
 <!-- # Implementation Timeline
 ## 8/13 Tuesday 
