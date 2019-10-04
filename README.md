@@ -1,18 +1,19 @@
 # Background and Overview
+Nutrify is a nutrional breakdown data visualization of a food items that users input.
 Enjoying food is great, but we should also keep check of what we're eating and how much we're eating. Food nutrition is a vital factor in our health.
 This data reflects the nutrional values ingredients have and compares it the average intake one should have in a given day.
 
 # Functionality and MVP
 Users are able to:
-- [ ] Enter an ingredient list
-- [ ] Get nutritional value of food broken 
+- [ ] Enter an list of ingredients or a food log
+- [ ] Get nutritional value of food broken down into sections
 - [ ] Get a comparison of the meal's nutrition to a daily average intake
 
-# Wireframes
-![Wireframe](./wireframe_image/wireframe.jpg)
+<!-- # Wireframes
+![Wireframe](./wireframe_image/wireframe.jpg) -->
 
 # Architecture and Technology
-EDAMAM is a free available API that return the nutrional breakdown values of given ingredients.
+Nutritionix is a free available API that return the nutrional breakdown values of given ingredients.
 
 - Javascript
 - D3.js 
@@ -20,7 +21,7 @@ EDAMAM is a free available API that return the nutrional breakdown values of giv
 - CSS3
 - Chart.js
 
-# Implementation Timeline
+<!-- # Implementation Timeline
 ## 8/13 Tuesday 
 * Research D3 charts
 * Research Chart.js
@@ -42,5 +43,5 @@ EDAMAM is a free available API that return the nutrional breakdown values of giv
 
 ## 8/17 Saturday
 * Implement CSS styling and effects accordingly
-
+ -->
 
