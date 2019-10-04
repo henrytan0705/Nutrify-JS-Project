@@ -137,7 +137,7 @@ document.addEventListener("submit", (e) => {
                 foodList.appendChild(food);
             }         
 
-            if (typesOfFood.length >= 10) {
+            if (typesOfFood.length > 5) {
                document.getElementById("list-section").style.overflowY = "scroll";
             } else {
                 document.getElementById("list-section").style.overflowY = "none";
