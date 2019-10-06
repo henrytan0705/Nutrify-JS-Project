@@ -1,3 +1,7 @@
+# Nutrify
+
+[Nutrify Live Site](https://henrytan0705.github.io/Nutrify-JS-Project/)
+
 # Background and Overview
 Nutrify is a nutrional breakdown data visualization of a food items that users input.
 Enjoying food is great, but we should also keep check of what we're eating and how much we're eating. Food nutrition is a vital factor in our health.
@@ -29,6 +33,38 @@ Users are able to:
 # Features
 
 Nutrify is a straight forward application, whereas users only have to input the data they want calculated and submit it.
+
+## Nutritonix API Usage
+    let foodData = {
+        "query": formValue,            //user input 
+        "timezone":"US/Eastern"
+    };
+
+    function postData(url = '', data = {}) {
+        return fetch(url, {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'same-origin',
+            headers: {
+                'Content-Type': 'application/json',
+                "x-app-id": "c6356694",
+                "x-app-key": "07260f8e8e52a443f2cb118d81efe6d4",
+                "x-remote-user-id": 0
+            },
+            redirect: 'follow',
+            referrer: 'no-referrer',
+            body: JSON.stringify(data),
+        })
+            .then(response => response.json());
+    }
+
+    postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
+        .then( data => {...} )
+        .catch( error => {...} )
+
+- User data is passed into an specifically formatted object's key value of "query"
+- Object is then sent to url of Nutritonix API, returning data/error 
 
 # Data Breakdown
 

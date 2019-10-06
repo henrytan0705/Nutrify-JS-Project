@@ -300,6 +300,4 @@ function loadLiquidFillGauge(id, value, config) {
 
     return new GaugeUpdater();
 
-
-    
 }
