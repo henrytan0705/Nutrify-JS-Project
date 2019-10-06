@@ -22,7 +22,7 @@ body {
 
 .form-wrapper {
     text-align: center;
-    height: 45vh;
+    /* height: 45vh; */
     display: flex;
     flex-direction: column;
 }
@@ -33,7 +33,7 @@ body {
     align-items: center;
     /* margin-top: 5vh; */
     /* border: 1px solid blue; */
-    height: 40vh;
+    height: 30vh;
     width: 100%;
     overflow: hidden;
     /* justify-content: space-between; */
@@ -45,6 +45,7 @@ body {
 
 .form-textarea {
     /* background-color: gray; */
+    overflow-y: scroll;
 }
 /*---------------------------------------------*/
 
@@ -57,7 +58,7 @@ body {
 .food-list {
     display: block;
     width: 100%;
-    height: 45vh;
+    height: 40vh;
     font-size: 10px;
     max-height: 250px;
 }
@@ -200,6 +201,7 @@ h4 {
 .space {
     padding: 0 10px;
 }
-/* .icon {
-    display: inline-block;
-} */
+
+.icon {
+    text-decoration: none;
+}
