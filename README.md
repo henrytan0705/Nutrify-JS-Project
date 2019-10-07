@@ -11,7 +11,7 @@ Nutritionix is a free available API that filters user input and returns the nutr
 
 # Functionality and MVP
 Users are able to:
-- [ ] Enter an list of ingredients or a food log
+- [ ] Enter a list of ingredients or a food log
 - [ ] Get nutritional value of food broken down into sections
 - [ ] Get a comparison of the meal's nutrition to a daily average intake
 
@@ -49,7 +49,7 @@ Nutrify is a straight forward application, whereas users only have to input the 
             headers: {
                 'Content-Type': 'application/json',
                 "x-app-id": "c6356694",
-                "x-app-key": "07260f8e8e52a443f2cb118d81efe6d4",
+                "x-app-key": "#############################",
                 "x-remote-user-id": 0
             },
             redirect: 'follow',
