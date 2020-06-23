@@ -58,9 +58,10 @@ document.addEventListener("submit", (e) => {
 
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
         .then(data => {
-            if (!!document.getElementsByClassName("error")[0]) {
-                let error = document.getElementsByClassName("error")[0];
-                error.remove();
+            if (!!document.getElementsByClassName("error-message")[0]) {
+                let error = document.getElementsByClassName("error-message")[0];
+                // error.remove();
+                error.textContent = "";
             }
 
             document.getElementById("item-list").classList.remove("hide-text");
@@ -293,13 +294,17 @@ document.addEventListener("submit", (e) => {
             gauge6 = null;
             gauge7 = null
 
-            let message = document.createElement("h1");
-            message.classList.add("error");
+            // let message = document.createElement("h1");
+            // message.classList.add("error");
             let input = document.getElementById("formValue").value;
-            message.appendChild(document.createTextNode(`No results found in input: "${input}"`));
-
-            let display = document.getElementsByClassName("nutrition-chart-wrapper")[0];
-            display.appendChild(message);
+            let message = document.getElementsByClassName("error-message")[0];
+            // message.textContent = `No results found in input: "${input}"`;
+            // message.textContent = "No available nutrional data, please try again.";
+            message.textContent = "No available nutrional data within input, please try again.";
+            // message.appendChild(document.createTextNode(`No results found in input: "${input}"`));
+            
+            // let display = document.getElementsByClassName("nutrition-chart-wrapper")[0];
+            // display.appendChild(message);
 
             document.getElementById("item-list").classList.add("hide-text");
             document.getElementById("list-section").style.overflowY = "none";

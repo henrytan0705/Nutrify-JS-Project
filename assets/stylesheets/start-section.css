@@ -1,0 +1,158 @@
+body {
+    /* background-color: #004E64; */
+    font-family: "Helvetica";
+}
+
+.header-section {
+    height: 10vh;
+    display: flex;
+    /* background-color: #00A5CF; */
+}
+
+.title {
+    /* color: #7AE582; */
+    color: #25A18E;
+    /* font-size: 50px; */
+    font-size: 3.5rem;
+    position: absolute;
+    top: 1.5vh;
+    left: 2vw;
+    /* border: 1px solid black; */
+}
+
+.links {
+    /* display: flex; */
+    padding: 1vh 0 0 3vw;
+    position: absolute;
+    top: 2vh;
+    right: 5vw;
+    /* border: 1px solid black; */
+}
+
+.link-icon {
+    font-size: 30px;
+    padding: 0;
+    color: black;
+}
+
+.space {
+    padding: 0 10px;
+}
+
+.icon {
+    text-decoration: none;
+}
+
+.start-section {
+    background-color: #004E64;
+    /* background-color: #00A5CF; */
+    height: 90vh;
+}
+
+ .message {
+    color: #25A18E;
+    text-align: center;
+    font-size: 20px;
+    /* margin-bottom: 20px; */
+    padding: 20px 0 20px;
+    /* border: 1px solid black; */
+}
+
+.message p {
+    margin-bottom: 15px;
+}
+
+.instructions-section {
+    color: white;
+    text-align: left;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    height: 150px;
+    justify-content: space-around;
+    padding: 2.5vh 0 2.5vh;
+    /* border: 1px solid black; */
+}
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.instructions-image {
+    /* height: 100px; */
+    height: 15vh;
+    /* width: 100px; */
+    width: 15vw;
+    margin-top: 15px;
+    /* border: 1px solid black; */
+}
+
+.arrow-box {
+    height: 175px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.arrow-image {
+    /* height: 50px; */
+    height: 5vh;
+    /* width: 50px; */
+    width: 5vw;
+}
+
+.form-wrapper {
+    /* display: block; */
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-title {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    /* padding-top: 25px; */
+    /* margin-bottom: 20px; */
+    margin-top: 1vh;
+    position: relative;
+    z-index: 10;
+}
+
+.form-content {
+   display: flex;
+   flex-direction: column;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    position: relative;
+    z-index: 50;
+    height: 2vh;
+    margin: 1vh 0 2vh;
+}
+
+.form-button {
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 1.75vh;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 10px;
+    /* border-radius: 1px; */
+}
+
+.button {
+    text-align: center;
+}
+/* .charts-wrapper {
+    background-color: #00A5CF;
+} */

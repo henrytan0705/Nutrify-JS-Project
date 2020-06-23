@@ -1,0 +1,22 @@
+.ingredients-section {
+    background-color: #00A5CF;
+    /* background-color: #004E64; */
+    height: 50vh;
+}
+
+.section-two {
+    /* background-color: #00A5CF; */
+    height: 55vh;
+    width: 100vw;
+    display: flex;
+}
+
+.food-list {
+    width: 50vw;
+    background-color: #00A5CF;
+}
+
+.donut {
+    width: 50vw;
+    background-color: #25A18E;
+}
