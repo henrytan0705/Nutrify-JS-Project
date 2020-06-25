@@ -4,19 +4,42 @@
     height: 50vh;
 }
 
-.section-two {
-    /* background-color: #00A5CF; */
-    height: 55vh;
+#sec{
+    display: none;
+}
+
+.section-two{
+    height: 50vh;
     width: 100vw;
     display: flex;
+}
+
+.hide-section {
+    display: none;
 }
 
 .food-list {
     width: 50vw;
     background-color: #00A5CF;
+    /* border: 1px solid black; */
+    /* margin: auto; */
+    /* text-align: center; */
 }
+
+.food-list-title {
+    font-size: 2rem;
+    margin: 1vh 0 1vh;
+    text-align: center;
+}
+
+.list-display {
+    margin-top: 3vh;
+    margin-left: 3vw;
+}
+
 
 .donut {
     width: 50vw;
     background-color: #25A18E;
+    /* border: 1px solid black; */
 }

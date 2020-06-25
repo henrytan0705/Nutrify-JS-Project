@@ -161,7 +161,8 @@
     
         <div class="instructions">
             <h4>Food Items List</h4>
-            <img class="instructions-image" src="./assets/images/list.svg">
+            <!-- <img class="instructions-image" src="./assets/images/list.svg"> -->
+            <img class="instructions-image" src="./assets/images/food-list.svg">
         </div>
 
         <div class="arrow-box">
@@ -170,7 +171,8 @@
 
         <div class="instructions">
             <h4>Donut Chart Breakdown</h4>
-            <img class="instructions-image" src="./assets/images/chart-donut.svg">
+            <!-- <img class="instructions-image" src="./assets/images/chart-donut.svg"> -->
+            <img class="instructions-image" src="./assets/images/donut.svg">
         </div>
 
         <div class="arrow-box">
@@ -184,30 +186,34 @@
     
     </div>
     
-    <div class="form-title">
-        <h1>Food Log</h1>
+    <div class="food-log-section">
+        <div class="form-title">
+            <h1>Food Log</h1>
+        </div>
+        
+        <div class="error-message"></div>
+        
+        <div class="form-wrapper">
+            <!-- <div class="form-content"> -->
+
+            <form class="form-content">
+                <textarea id="formValue" class="form-textarea"  
+                    placeholder="Ex: 1 oz chicken, 3 cups of milk"></textarea>
+                <div class="button">
+                    <input class="form-button" type="submit" />
+                </div>
+            </form>
+
+            <!-- </div> -->
+        </div>
+
     </div>
 
-    <div class="error-message">
-        
-    </div>
-    
-    <div class="form-wrapper">
-        <!-- <div class="form-content"> -->
-        <form class="form-content">
-            <textarea id="formValue" class="form-textarea" rows="15" cols="70"
-                placeholder="Ex: 1 oz chicken, 3 cups of milk"></textarea>
-            <div class="button">
-                <input class="form-button" type="submit" />
-            </div>
-        </form>
-        <!-- </div> -->
-    </div>
 </div>
 
 
 <!-- <div class="ingredients-section"> -->
-<div class="section-two">
+<div id="section-two" class="hide-section">
 
     <div class="food-list" id="list-section">
         <h1 class="food-list-title hide-text" id="item-list">Items List</h1>
@@ -228,7 +234,7 @@
 
 
 
-    <div class="gauges-section">
+    <div id="section-three" class="hide-section">
         <h1 class="nutrition-chart-title">Nutritional Breakdown based on FDA Nutritonal Diet</h1>
         
         <div class="percentage-chart-wrapper">
@@ -289,7 +295,12 @@
         <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from
             <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-</div>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+        <div>Icons made by <a href="https://www.flaticon.com/authors/iconixar" title="iconixar">iconixar</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
     
 </body>
 

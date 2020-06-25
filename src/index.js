@@ -56,15 +56,31 @@ document.addEventListener("submit", (e) => {
 
     let typesOfFood;
 
+
+    ///////////
+
+
+
+    ////////////////
+
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
         .then(data => {
             if (!!document.getElementsByClassName("error-message")[0]) {
                 let error = document.getElementsByClassName("error-message")[0];
-                // error.remove();
                 error.textContent = "";
+            }  
+          
+            if (data.foods.length === 0) {
+                return;
             }
 
-            document.getElementById("item-list").classList.remove("hide-text");
+            document.getElementById("section-two").classList.remove("hide-section");
+            document.getElementById("section-two").classList.add("section-two");
+
+            document.getElementById("section-three").classList.remove("hide-section");
+            document.getElementById("section-three").classList.add("section-three");
+            // document.getElementById("item-list").classList.remove("hide-text");
+            
 
             typesOfFood = Object.values(data.foods).map(i => i.food_name);
 
@@ -233,7 +249,6 @@ document.addEventListener("submit", (e) => {
 
             //update gauge upon new submits
             if (!!gauge1) {
-
                 gauge1.update((totalCalories/2000) * 100)
                 gauge2.update((nutritionalData.totalProtein / 50)  * 100)
                 gauge3.update((nutritionalData.totalCarbs / 300) * 100)
@@ -250,7 +265,6 @@ document.addEventListener("submit", (e) => {
                 gauge6 = loadLiquidFillGauge("cholesterol", (nutritionalData.totalCholesterol / 300) * 100, config6);
                 gauge7 = loadLiquidFillGauge("sugar", (nutritionalData.totalSugar / 50) * 100, config7);
             }
-            
             
         })
         .catch(error => {
@@ -308,6 +322,7 @@ document.addEventListener("submit", (e) => {
 
             document.getElementById("item-list").classList.add("hide-text");
             document.getElementById("list-section").style.overflowY = "none";
+
         })
   
 })
