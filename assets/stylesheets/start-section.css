@@ -63,6 +63,7 @@ body {
     flex-direction: column;
     /* justify-content: space-around; */
     height: 22.5vh;
+    margin-bottom: 5vh;
     /* border: 1px solid black; */
 }
 
