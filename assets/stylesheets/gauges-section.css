@@ -1,9 +1,9 @@
-.gauges-section {
-    /* background-color: #00A5CF; */
-  
-}
-
 .section-three {
     background-color: #004E64;
     height: 60vh;
 }
+
+.percentage-chart-wrapper {
+    display: none;
+}
+

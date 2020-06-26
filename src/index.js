@@ -56,23 +56,16 @@ document.addEventListener("submit", (e) => {
 
     let typesOfFood;
 
-
-    ///////////
-
-
-
-    ////////////////
-
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
         .then(data => {
             if (!!document.getElementsByClassName("error-message")[0]) {
                 let error = document.getElementsByClassName("error-message")[0];
                 error.textContent = "";
             }  
-          
+
             if (data.foods.length === 0) {
                 return;
-            }
+            }            
 
             document.getElementById("section-two").classList.remove("hide-section");
             document.getElementById("section-two").classList.add("section-two");
@@ -81,7 +74,6 @@ document.addEventListener("submit", (e) => {
             document.getElementById("section-three").classList.add("section-three");
             // document.getElementById("item-list").classList.remove("hide-text");
             
-
             typesOfFood = Object.values(data.foods).map(i => i.food_name);
 
             let totalCalories = 0; 
@@ -159,6 +151,14 @@ document.addEventListener("submit", (e) => {
             } else {
                 document.getElementById("list-section").style.overflowY = "none";
             }
+
+            const element = document.getElementById("form-section");
+            const topPos = element.getBoundingClientRect().top + window.pageYOffset;
+
+            window.scrollTo({
+                top: topPos, // scroll so that the element is at the top of the view
+                behavior: 'smooth' // smooth scroll
+            })
 
             let caloriesDisplay = document.getElementById("calories-display");
             caloriesDisplay.textContent = `Calories (${parseFloat(totalCalories).toFixed(2)})`;
@@ -244,7 +244,6 @@ document.addEventListener("submit", (e) => {
             config7.textVertPosition = 0.2;
             config7.waveAnimateTime = 1000;
             
-
             // var config2 = liquidFillGaugeDefaultSettings();
 
             //update gauge upon new submits
@@ -310,11 +309,13 @@ document.addEventListener("submit", (e) => {
 
             // let message = document.createElement("h1");
             // message.classList.add("error");
-            let input = document.getElementById("formValue").value;
-            let message = document.getElementsByClassName("error-message")[0];
+            // let input = document.getElementById("formValue").value;
             // message.textContent = `No results found in input: "${input}"`;
             // message.textContent = "No available nutrional data, please try again.";
-            message.textContent = "No available nutrional data within input, please try again.";
+            // if (gauge1 === null) {
+                let message = document.getElementsByClassName("error-message")[0];
+                message.textContent = "No available nutrional data within input, please try again.";
+            // }
             // message.appendChild(document.createTextNode(`No results found in input: "${input}"`));
             
             // let display = document.getElementsByClassName("nutrition-chart-wrapper")[0];

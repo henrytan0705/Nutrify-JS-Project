@@ -1,0 +1,60 @@
+.section-two{
+    height: 55vh;
+    width: 100vw;
+    display: flex;
+}
+
+.hide-section {
+    display: none;
+}
+
+.food-list {
+    width: 50vw;
+    background-color: #00A5CF;
+}
+
+.food-list-title {
+    font-size: 2rem;
+    margin: 3vh 0 3vh;
+    text-align: center;
+    color: white;
+}
+
+.list-display {
+    margin-top: 3vh;
+    margin-left: 3vw;
+}
+
+.donut {
+    width: 50vw;
+    background-color: #25A18E;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+}
+
+.donut-title {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin: 3vh 0 3vh;
+}
+
+
+@media screen and (max-width: 666px) {
+    .section-two {
+        flex-direction: column;
+        height: 115vh;
+    }
+
+    .food-list {
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .donut { 
+        width: 100vw;
+        height: 65vh;
+    }
+}
