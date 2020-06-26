@@ -1,9 +1,30 @@
+#section-three {
+    background-color: #004E64;
+    /* height: 100vh; */
+    border: 2px solid black;
+
+}
+
 .section-three {
     background-color: #004E64;
-    height: 60vh;
+    height: 100vh;
+}
+
+.nutrition-chart-title {
+    text-align: center;
+    height: 10vh;
 }
 
 .percentage-chart-wrapper {
-    display: none;
+    height: 90vh;
+    /* display: grid; */
+    display:none;
+    /* grid-template-columns: 40vw 20vw 20vw 20vw; */
+    grid-template-columns: 30vw 70vw;
+    border: 1px solid red;
 }
 
+.sub-gauges {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}

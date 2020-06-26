@@ -18,43 +18,40 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 })
 
+function postData(url = '', data = {}) {
+    return fetch(url, {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-cache',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+            "x-app-id": "c6356694",
+            "x-app-key": "07260f8e8e52a443f2cb118d81efe6d4",
+            "x-remote-user-id": 0
+        },
+        redirect: 'follow',
+        referrer: 'no-referrer',
+        body: JSON.stringify(data),
+    })
+        .then(response => response.json());
+}
+
 document.addEventListener("submit", (e) => {
     if (chart !== null) chart.destroy();
 
     e.preventDefault();
     let formValue = document.getElementById("formValue").value;
     let foodList = document.getElementById("food");
-    // let gauges = document.getElementById("gauges");
-
-    while (foodList.firstChild) {
-        foodList.removeChild(foodList.firstChild);
-    }
-
+    let typesOfFood;
     let foodData = {
         "query": formValue,
         "timezone":"US/Eastern"
     };
 
-    function postData(url = '', data = {}) {
-        return fetch(url, {
-            method: 'POST',
-            mode: 'cors',
-            cache: 'no-cache',
-            credentials: 'same-origin',
-            headers: {
-                'Content-Type': 'application/json',
-                "x-app-id": "c6356694",
-                "x-app-key": "07260f8e8e52a443f2cb118d81efe6d4",
-                "x-remote-user-id": 0
-            },
-            redirect: 'follow',
-            referrer: 'no-referrer',
-            body: JSON.stringify(data),
-        })
-            .then(response => response.json());
+    while (foodList.firstChild) {
+        foodList.removeChild(foodList.firstChild);
     }
-
-    let typesOfFood;
 
     postData('https://trackapi.nutritionix.com/v2/natural/nutrients', foodData)
         .then(data => {
@@ -63,9 +60,7 @@ document.addEventListener("submit", (e) => {
                 error.textContent = "";
             }  
 
-            if (data.foods.length === 0) {
-                return;
-            }            
+            if (data.foods.length === 0) return;
 
             document.getElementById("section-two").classList.remove("hide-section");
             document.getElementById("section-two").classList.add("section-two");
@@ -137,7 +132,6 @@ document.addEventListener("submit", (e) => {
                 },
 
             });
-       
 
             for (let i = 0; i < typesOfFood.length; i++) {
                 let food = document.createElement("h1");
@@ -152,9 +146,13 @@ document.addEventListener("submit", (e) => {
                 document.getElementById("list-section").style.overflowY = "none";
             }
 
-            const element = document.getElementById("form-section");
-            const topPos = element.getBoundingClientRect().top + window.pageYOffset;
+            // const element = document.getElementById("form-section");
+            const hook = document.getElementById("section-two");
 
+            // const topPos = element.getBoundingClientRect().top + window.pageYOffset;
+            const topPos = hook.getBoundingClientRect().top + window.pageYOffset;
+
+            // debugger
             window.scrollTo({
                 top: topPos, // scroll so that the element is at the top of the view
                 behavior: 'smooth' // smooth scroll
