@@ -26,8 +26,11 @@ function postData(url = '', data = {}) {
         credentials: 'same-origin',
         headers: {
             'Content-Type': 'application/json',
-            "x-app-id": "c6356694",
-            "x-app-key": "07260f8e8e52a443f2cb118d81efe6d4",
+            // "x-app-id": "c6356694",
+            // "x-app-key": "07260f8e8e52a443f2cb118d81efe6d4",
+            "x-app-id": "6aac3c9e",
+            "x-app-key": "df6b297bc4e455ec0a6b83c66dab63c1",
+
             "x-remote-user-id": 0
         },
         redirect: 'follow',
@@ -69,7 +72,12 @@ document.addEventListener("submit", (e) => {
             document.getElementById("section-three").classList.add("section-three");
             // document.getElementById("item-list").classList.remove("hide-text");
             
-            typesOfFood = Object.values(data.foods).map(i => i.food_name);
+            // typesOfFood = Object.values(data.foods).map(i => i.food_name);
+            // debugger
+            typesOfFood = Object.values(data.foods).map(i => {
+                let item = `${i.serving_qty} ${i.serving_unit} ${i.food_name}`
+                return item;
+            });
 
             let totalCalories = 0; 
             let nutritionTypes = ["Protein", "Carbohydrates", "Fats", "Sodium", "Cholesterol", "Sugar"];
@@ -140,11 +148,11 @@ document.addEventListener("submit", (e) => {
                 foodList.appendChild(food);
             }         
 
-            // if (typesOfFood.length > 5) {
-            //    document.getElementById("list-section").style.overflowY = "scroll";
-            // } else {
-            //     document.getElementById("list-section").style.overflowY = "none";
-            // }
+            if (typesOfFood.length > 5) {
+               document.getElementById("list-section").style.overflowY = "scroll";
+            } else {
+                document.getElementById("list-section").style.overflowY = "none";
+            }
 
             // const element = document.getElementById("form-section");
             const hook = document.getElementById("section-two");

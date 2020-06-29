@@ -23,6 +23,7 @@
 .list-display {
     margin-top: 3vh;
     margin-left: 3vw;
+    font-size: 30px;
 }
 
 .donut {
@@ -128,12 +129,13 @@
 @media screen and (max-width: 768px) {
     .section-two {
         flex-direction: column;
-        height: 929px;
+        height: 925px;
     }
 
     .food-list {
         width: 100vw;
         height: 48vh;
+        height: 400px;
     }
 
     .donut { 
@@ -143,6 +145,10 @@
 
     .food-list-title, .donut-title {
         font-size: 30px;
+    }
+
+    .food-item {
+        font-size: 20px;
     }
 }
 
@@ -157,6 +163,10 @@
         height: 95vh;
     }
     
+    .list {
+        padding-bottom: 12px;
+    }
+
     .donut {
         height: 55vh;
     }
