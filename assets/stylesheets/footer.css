@@ -1,4 +1,27 @@
 .footer {
     background-color: #00A5CF;
-    height: 25vh;
+    /* height: 25vh; */
+    height: 175px;
+}
+
+.api {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.credit {
+    font-size: 25px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        height: 200px;
+    }
+
+    .api, .credit {
+        font-size: 20px;
+    }
 }

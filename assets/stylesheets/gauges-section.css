@@ -29,9 +29,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-around; */
+    justify-content: center;
     text-align: center;
+    
     /* border: 1px solid white; */
+}
+
+#calories-display {
+    padding-bottom: 50px;
 }
 
 .calories {
@@ -47,6 +53,7 @@
 
 .sub-gauge {
     margin-top: 0;
+    justify-content: space-evenly;
 }
 
 .gauge-size {

@@ -140,11 +140,11 @@ document.addEventListener("submit", (e) => {
                 foodList.appendChild(food);
             }         
 
-            if (typesOfFood.length > 5) {
-               document.getElementById("list-section").style.overflowY = "scroll";
-            } else {
-                document.getElementById("list-section").style.overflowY = "none";
-            }
+            // if (typesOfFood.length > 5) {
+            //    document.getElementById("list-section").style.overflowY = "scroll";
+            // } else {
+            //     document.getElementById("list-section").style.overflowY = "none";
+            // }
 
             // const element = document.getElementById("form-section");
             const hook = document.getElementById("section-two");
@@ -152,7 +152,6 @@ document.addEventListener("submit", (e) => {
             // const topPos = element.getBoundingClientRect().top + window.pageYOffset;
             const topPos = hook.getBoundingClientRect().top + window.pageYOffset;
 
-            // debugger
             window.scrollTo({
                 top: topPos, // scroll so that the element is at the top of the view
                 behavior: 'smooth' // smooth scroll
@@ -267,27 +266,32 @@ document.addEventListener("submit", (e) => {
         .catch(error => {
             // let donut = document.getElementById("nutrition");
             // donut.remove();
+            document.getElementById("section-two").classList.add("hide-section");
+            document.getElementById("section-two").classList.remove("section-two");
 
-            let caloriesDisplay = document.getElementById("calories-display");
-            caloriesDisplay.textContent = "";
+            document.getElementById("section-three").classList.add("hide-section");
+            document.getElementById("section-three").classList.remove("section-three");
 
-            let proteinDisplay = document.getElementById("protein-display");
-            proteinDisplay.textContent = "";
+            // let caloriesDisplay = document.getElementById("calories-display");
+            // caloriesDisplay.textContent = "";
 
-            let carbsDisplay = document.getElementById("carb-display");
-            carbsDisplay.textContent = "";
+            // let proteinDisplay = document.getElementById("protein-display");
+            // proteinDisplay.textContent = "";
 
-            let fatDisplay = document.getElementById("fat-display");
-            fatDisplay.textContent = "";
+            // let carbsDisplay = document.getElementById("carb-display");
+            // carbsDisplay.textContent = "";
 
-            let sodiumDisplay = document.getElementById("sodium-display");
-            sodiumDisplay.textContent = "";
+            // let fatDisplay = document.getElementById("fat-display");
+            // fatDisplay.textContent = "";
 
-            let cholDisplay = document.getElementById("chol-display");
-            cholDisplay.textContent = "";
+            // let sodiumDisplay = document.getElementById("sodium-display");
+            // sodiumDisplay.textContent = "";
 
-            let sugarDisplay = document.getElementById("sugar-display");
-            sugarDisplay.textContent = "";
+            // let cholDisplay = document.getElementById("chol-display");
+            // cholDisplay.textContent = "";
+
+            // let sugarDisplay = document.getElementById("sugar-display");
+            // sugarDisplay.textContent = "";
 
             let gauges = document.querySelectorAll("svg");
 
