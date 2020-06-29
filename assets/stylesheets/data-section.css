@@ -28,10 +28,8 @@
 .donut {
     width: 60vw;
     background-color: #25A18E;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
-    /* justify-content: space-around; */
 }
 
 .donut-title {
@@ -71,14 +69,12 @@
 
 @media screen and (max-width: 1600px) {
     .section-two {
-        /* height: 70vh; */
         height: 600px;
     }
 }
 
 @media screen and (max-width: 1450px) {
     .section-two {
-        /* height: 70vh; */
         height: 575px;
     }
 
@@ -89,7 +85,6 @@
 
 @media screen and (max-width: 1310px) {
     .section-two {
-        /* height: 60vh; */
         height: 525px;
     }
 }
@@ -102,14 +97,12 @@
 
 @media screen and (max-width: 1150px) {
     .section-two {
-        /* height: 55vh; */
         height: 475px;
     }
 }
 
 @media screen and (max-width: 1045px) {
     .section-two {
-        /* height: 50vh; */
         height: 450px;
     }
 
@@ -154,19 +147,7 @@
 }
 
 @media screen and (max-width: 666px) {
-    /* .section-two {
-        height: 929px;
-    } */
-
-    /* .food-list {
-        width: 100vw; */
-        /* height: 48vh; */
-        /* height: 404px; */
-    /* } */
-
     .donut { 
-        /* width: 100vw; */
-        /* height: 70vh; */
         height: 525px;
     }
 }

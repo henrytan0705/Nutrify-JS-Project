@@ -159,7 +159,7 @@ document.addEventListener("submit", (e) => {
             })
 
             let caloriesDisplay = document.getElementById("calories-display");
-            caloriesDisplay.textContent = `Calories (${parseFloat(totalCalories).toFixed(2)})`;
+            caloriesDisplay.textContent = `Calories (${parseFloat(totalCalories).toFixed(2)}kcal)`;
 
             let proteinDisplay = document.getElementById("protein-display");
             proteinDisplay.textContent = `Protein (${parseFloat(nutritionalData.totalProtein).toFixed(2)}g)`;
@@ -181,7 +181,7 @@ document.addEventListener("submit", (e) => {
 
             let config1 = liquidFillGaugeDefaultSettings();
             config1.circleColor = "#00237c";
-            config1.textColor = "black";
+            config1.textColor = "white";
             config1.waveTextColor = "white";
             config1.waveColor = "#00237c";
             config1.circleThickness = 0.2;
@@ -190,7 +190,7 @@ document.addEventListener("submit", (e) => {
             
             let config2 = liquidFillGaugeDefaultSettings();
             config2.circleColor = "#082342";
-            config2.textColor = "black";
+            config2.textColor = "white";
             config2.waveTextColor = "white";
             config2.waveColor = "#082342";
             config2.circleThickness = 0.2;
@@ -199,8 +199,8 @@ document.addEventListener("submit", (e) => {
 
             let config3 = liquidFillGaugeDefaultSettings();
             config3.circleColor = "#f3d0b0";
-            config3.textColor = "black";
-            config3.waveTextColor = "gray";
+            config3.textColor = "white";
+            config3.waveTextColor = "black";
             config3.waveColor = "#f3d0b0";
             config3.circleThickness = 0.2;
             config3.textVertPosition = 0.2;
@@ -208,8 +208,8 @@ document.addEventListener("submit", (e) => {
 
             let config4 = liquidFillGaugeDefaultSettings();
             config4.circleColor = "#e2705a";
-            config4.textColor = "black";
-            config4.waveTextColor = "pink";
+            config4.textColor = "white";
+            config4.waveTextColor = "white";
             config4.waveColor = "#e2705a";
             config4.circleThickness = 0.2;
             config4.textVertPosition = 0.2;
@@ -217,7 +217,7 @@ document.addEventListener("submit", (e) => {
 
             let config5 = liquidFillGaugeDefaultSettings();
             config5.circleColor = "#242323";
-            config5.textColor = "black";
+            config5.textColor = "white";
             config5.waveTextColor = "white";
             config5.waveColor = "#242323";
             config5.circleThickness = 0.2;
@@ -227,7 +227,7 @@ document.addEventListener("submit", (e) => {
             let config6 = liquidFillGaugeDefaultSettings();
             config6.circleColor = "#6ca339";
             config6.textColor = "green";
-            config6.waveTextColor = "black";
+            config6.waveTextColor = "white";
             config6.waveColor = "#6ca339";
             config6.circleThickness = 0.2;
             config6.textVertPosition = 0.2;
@@ -235,8 +235,8 @@ document.addEventListener("submit", (e) => {
 
             let config7 = liquidFillGaugeDefaultSettings();
             config7.circleColor = "#cde6fd";
-            config7.textColor = "black";
-            config7.waveTextColor = "blue";
+            config7.textColor = "white";
+            config7.waveTextColor = "black";
             config7.waveColor = "#cde6fd";
             config7.circleThickness = 0.2;
             config7.textVertPosition = 0.2;
