@@ -41,37 +41,49 @@
     margin: 3vh 0 3vh;
 }
 
-@media screen and (min-width: 1510px) {
+@media screen and (min-width: 1651px) {
     .section-two {
-        height: 80vh;
+        /* height: 80vh; */
+        height: 700px;;
     }
-    .donut {
+    /* .donut {
         height: 500px;
         width: 500px;
+    } */
+}
+
+@media screen and (max-width: 1650px) {
+    .section-two {
+        /* height: 70vh; */
+        height: 600px;
     }
 }
 
-@media screen and (max-width: 1410px) {
+@media screen and (max-width: 1500px) {
     .section-two {
-        height: 70vh;
+        /* height: 70vh; */
+        height: 550px;
     }
 }
 
 @media screen and (max-width: 1310px) {
     .section-two {
-        height: 60vh;
+        /* height: 60vh; */
+        height: 500px;
     }
 }
 
 @media screen and (max-width: 1220px) {
     .section-two {
-        height: 55vh;
+        /* height: 55vh; */
+        height: 450px;
     }
 }
 
 @media screen and (max-width: 1030px) {
     .section-two {
-        height: 50vh;
+        /* height: 50vh; */
+        height: 400px;
     }
 }
 
@@ -89,34 +101,56 @@
     .section-two {
         flex-direction: column;
         /* height: 115vh; */
-        height: 85vh;
+        height: 929px;
     }
 
     .food-list {
         width: 100vw;
         height: 48vh;
+        /* height: 404px; */
     }
 
     .donut { 
         width: 100vw;
-        height: 70vh;
+        /* height: 70vh; */
+        height: 525px;
     }
 }
 
 @media screen and (max-width: 666px) {
-    .food-list {
-        height: 40vh;
+    /* .section-two {
+        height: 929px;
+    } */
+
+    /* .food-list {
+        width: 100vw; */
+        /* height: 48vh; */
+        /* height: 404px; */
+    /* } */
+
+    .donut { 
+        /* width: 100vw; */
+        /* height: 70vh; */
+        height: 525px;
     }
 }
 
 @media screen and (max-width: 600px) {
+    .section-two {
+        height: 95vh;
+    }
+    
     .donut {
-        height: 65vh;
+        height: 55vh;
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 530px) {
+    .section-two {
+        height: 90vh;
+    }
+
     .donut {
-        height: 55vh;
+        height: 50vh;
     }
 }
