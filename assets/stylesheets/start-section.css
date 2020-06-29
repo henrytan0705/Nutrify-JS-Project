@@ -3,18 +3,20 @@
 }
 
 .header-section {
-    height: 10vh;
+    /* height: 10vh; */
+    height: 125px;
     display: flex;
 }
 
 .title {
     color: #25A18E;
     font-size: 3.25rem;
-    padding: 1.5vh 0 0 2vw;;
+    /* padding: 1.5vh 0 0 2vw;; */
+    padding: 30px 0 0 40px;
 }
 
 .links {
-    padding: 1vh 0 0 3vw;
+    padding: 2vh 0 0 3vw;
     position: absolute;
     top: 2vh;
     right: 5vw;
@@ -22,8 +24,16 @@
 
 .link-icon {
     font-size: 30px;
-    font-size: 2rem;
+    font-size: 3rem;
     padding: 0;
+    /* color: black; */
+}
+
+.fa-linkedin {
+    color: #2867B2;;
+}
+
+.fa-angellist, .fa-github{
     color: black;
 }
 
@@ -47,6 +57,7 @@
     flex-direction: column;
     height: 22.5vh;
     margin-bottom: 5vh;
+    padding: 0 2vw 0;
 }
 
 .message p {
@@ -126,7 +137,8 @@
     position: relative;
     z-index: 50;
     height: 2vh;
-    margin-bottom: 1vh;
+    margin: 0 1vw 1vh;
+    font-size: 23px;
 }
 
 .form-button {
@@ -156,6 +168,14 @@
 }
 
 @media screen and (max-width: 1450px) {
+    .header-section {
+        height: 115px;
+    }
+
+    .link-icon {
+        font-size: 2.5rem;
+    }
+
     .instructions h4, .message {
         font-size: 1.7rem;
     }
@@ -176,14 +196,14 @@
 }
 
 @media screen and (max-width: 1045px) {
+    .header-section {
+        height: 110px;
+    }
+
     .instructions-section {
         padding: 0 2vw 0;
     }
 
-    .message {
-        padding: 0 2vw 0;
-    }
-    
     .message p {
         margin: 2vh 0 1vh;
     }
@@ -200,6 +220,7 @@
 }
 
 @media screen and (max-width: 960px) {
+
     .arrow-box {
         display: none;
     }
@@ -219,7 +240,7 @@
     }
 }
 
-@media screen and (max-width: 792px) {
+@media screen and (max-width: 768px) {
     .title { 
         font-size: 3rem;
     }
@@ -240,6 +261,10 @@
 }
 
 @media screen and (max-width: 666px) {
+    .header-section {
+        height: 100px;
+    }
+
     .instructions-section {
         flex-direction: column;
         flex-wrap: wrap;
@@ -274,6 +299,10 @@
 
     .form-button {
         margin-top: 9vh;
+    }
+
+    .error-message {
+        margin-bottom: 2vh;
     }
 }
 

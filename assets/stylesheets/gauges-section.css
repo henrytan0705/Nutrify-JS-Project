@@ -1,5 +1,5 @@
 #section-three {
-    background-color: #004E64;
+    /* background-color: #004E64; */
     /* height: 100vh; */
     border: 2px solid black;
 
@@ -12,13 +12,16 @@
 
 .nutrition-chart-title {
     text-align: center;
-    height: 10vh;
+    /* height: 10vh; */
+    height: 100px;
+    font-size: 50px;
+    color: white;
 }
 
 .percentage-chart-wrapper {
     height: 90vh;
-    /* display: grid; */
-    display:none;
+    display: grid;
+    /* display:none; */
     /* grid-template-columns: 40vw 20vw 20vw 20vw; */
     grid-template-columns: 30vw 70vw;
     border: 1px solid red;
